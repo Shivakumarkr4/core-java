@@ -1,0 +1,4 @@
+class Asus extends Laptop{
+
+
+}

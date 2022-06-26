@@ -1,0 +1,3 @@
+class Tubelight extends ElectronicDevice{
+
+}
