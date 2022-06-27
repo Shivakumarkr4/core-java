@@ -1,3 +1,0 @@
-class HTML extends Webtechonology{
-
-}

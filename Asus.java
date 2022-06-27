@@ -1,4 +1,0 @@
-class Asus extends Laptop{
-
-
-}
