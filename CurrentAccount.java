@@ -13,12 +13,12 @@ this.interestRate = interestRate;
 }
 
 public double deposit(double amt){
-
+  
 System.out.println("invoke deposit()");
 System.out.println("Amount to be deposited "+ amt);	
 System.out.println("Amount before deposit "+ amount);
 	
-	amount = amount-amt;
+	amount = amount+amt;
 	System.out.println("The amount after deposit "+ amount);
 	System.out.println("deposit method is ended");
 	count++;

@@ -92,7 +92,7 @@
 		
 	}
 
-  //
+ 
   
     public void transfer(double tAmount , BankAccount other){
 		if (tAmount <= amount)
