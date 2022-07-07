@@ -27,7 +27,7 @@ public class LapTop{
 	 
 	 }
       
-     public void setPrice(double price)
+     public void setPriceDTO(double price)
      {
 	  this.price = price;
 	 }	 
@@ -64,14 +64,7 @@ public class LapTop{
 	  }
 
 
-      public void display()
-	  {
-	     System.out.println("To watch a movies");
-	  }
-
-
-
-
+     
 
 
 

@@ -2,7 +2,7 @@ class CarryBagTester{
 
    public static void main(String a[]){
    
-    CarryBag carry = new CarryBag();
+    CarryBagDTO carry = new CarryBagDTO();
     // carry.name = "BaBA's carryBag"
 	//carry.price = 5;
    carry.setName("BaBA's carryBag");
@@ -11,7 +11,7 @@ class CarryBagTester{
 
 	 System.out.println(carry.getName() + " " + carry.getPrice());
 	 
-	 carry.holdThings();
+	
 	 
    
    }

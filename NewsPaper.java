@@ -46,10 +46,7 @@ public class NewsPaper{
    this.type = type;
  }
  
- public void useOfNewsPaper()
- {
-   System.out.println("To read the information about yesterday");
- }
+ 
  
  
  

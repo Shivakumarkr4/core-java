@@ -2,7 +2,7 @@ class LapTopTester{
 
   public static void main(String a[]){
     
-	LapTop lp = new LapTop();
+	LapTopDTO lp = new LapTopDTO();
 	
 	lp.setName("Asus");
     lp.setPrice(35000.00);
@@ -11,7 +11,7 @@ class LapTopTester{
     lp.setOperatingSystem("Windows 11");
     
 	System.out.println("The laptop brand name "+lp.getName() + "\n The laptopprice is " + lp.getPrice()+ "\n The laptop ram is  " + lp.getRam()+"\n The laptop color is "+lp.getColor()+"\nThe laptop Operating system is "+lp.getOperatingSystem());
-	lp.display();
+	
 	
 	
   }

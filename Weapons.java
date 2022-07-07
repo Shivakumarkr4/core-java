@@ -46,10 +46,7 @@ public class Weapons{
    this.type = type;
  }
  
- public void useOfWeapons()
- {
-   System.out.println("To security purpose the weapons are usedgetBullets");
- }
+
  
  
  

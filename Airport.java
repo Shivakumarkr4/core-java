@@ -1,5 +1,6 @@
 public class Airport{
-
+  
+ 
   private String name;
   private String location;
   private String focusCityFor;
@@ -47,10 +48,6 @@ public class Airport{
   }
   
   
-  public void fly(){
-  
-    System.out.println("The flying with plane");
-  }
   
   
   

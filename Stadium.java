@@ -47,10 +47,7 @@
      this.capacity = capacity;
    }
    
-  public void game()
-  {
-   System.out.println("To watch a game ");
-  }
+  
 
 
 

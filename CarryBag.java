@@ -1,4 +1,4 @@
- public class CarryBag{
+ public class CarryBagDTO{
  
  
    public CarryBag(){
@@ -12,13 +12,23 @@
      
  
       //getter and setter = the way to access the private properties
- 
- 
+	  
+      //we right getter by having a prefix as "get" than variable name.
+	  //public returnType getVariableName(){
+		  
+		 // return VariableName;
+	  //}
+     
       public String getName(){
 	     return name;
 	  
 	  }
-	  
+	 
+	  // we right setter by having aprefix as "set"
+	  //public void setvariableName(datatype variableName){
+		   // this.variableName = variableName;
+		  //}
+		  
        public void setName(String name ){
 	       this.name = name;
 	      
@@ -33,10 +43,6 @@
 	   
 	   }
        
-		public void holdThings(){
-		
-		System.out.println("To hold the materials");
-		} 
 		
 		
 }

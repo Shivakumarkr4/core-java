@@ -45,10 +45,7 @@
    this.price = price;
  }
  
- public void book()
- {
-   System.out.println("To story of the book");
- }
+ 
  
  
  

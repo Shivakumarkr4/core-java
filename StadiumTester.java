@@ -2,7 +2,7 @@ class StadiumTester{
 
    public static void main(String a[]){
        
-   Stadium st = new Stadium();
+   StadiumDTO st = new StadiumDTO();
    
    st.setName("ChinnaSwami ground");
    st.setLocation("bangalore");
@@ -12,7 +12,7 @@ class StadiumTester{
    System.out.println(" The stadium name is "+st.getName()+ " \n The stadium of location "+st.getLocation()+" \nThe type of ground is "+st.getType()+" \n The capacity of stadium"+st.getCapacity());
    
    
-   st.game();
+  
    
    
    
