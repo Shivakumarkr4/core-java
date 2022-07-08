@@ -1,20 +1,48 @@
+import java.util.Scanner;
+
+
 class HospitalTester{
 
 
     public static void main(String a[]){
-          
-     Hospital hos = new Hospital();
-
-     PatientDTO dto = new PatientDTO();
-     dto.setId(1);
-	 dto.setName("sachin");
-     dto.setAddress("Banglore");
-     dto.setGender(Gender.MALE);
-     dto.setContactNo(8494992342l);
+      
+	  //Scanner class object creation 
+	 Scanner sc = new Scanner(System.in);
+	 
+	 System.out.println("Enter the no of patient added"); 
+	 int size = sc.nextInt();	 
+	 
+	 Hospital hos = new Hospital(size);
+	 
+	 for(int i=0; i<size;i++){
+	
+	 PatientDTO dto = new PatientDTO();
+	
+     System.out.println("Enter the patient Name ");
+      String name = sc.next();
+     
+	 System.out.println("Enter the patient address");
+     String address = sc.next();
+     
+	 System.out.println("Enter patient id");
+     int id = sc.nextInt();
+	 
+	 System.out.println("Enter the contact number");
+     long contactNO = sc.nextLong();
+    	 
 	 
 	
+	 dto.setId(id);
+	 dto.setName(name);
+     dto.setAddress(address);
+     dto.setGender(Gender.MALE);
+     dto.setContactNo(contactNO);
+	 
+	 hos.createPatient(dto);
+	}
+	 hos.getPatientDetails();
 	
-     PatientDTO dto1 = new PatientDTO();
+     /*PatientDTO dto1 = new PatientDTO();
      dto1.setId(2);
 	 dto1.setName("sushas");
      dto1.setAddress("managlore");
@@ -44,16 +72,17 @@ class HospitalTester{
 	 dto4.setName("Hema");
      dto4.setAddress("mysore");
      dto4.setGender(Gender.MALE);
-     dto4.setContactNo(8494992342l);
+     dto4.setContactNo(8494992342l);*/
 	 
 	 
 	 
-	 hos.createPatient(dto);
-     hos.createPatient(dto1);
+
+	 
+     /*hos.createPatient(dto1);
 	 hos.createPatient(dto2);
 	 hos.createPatient(dto3);
-	 hos.createPatient(dto4);
-     hos.getPatientDetails();
+	 hos.createPatient(dto4);*/
+    
     
 	}
 

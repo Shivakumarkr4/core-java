@@ -1,11 +1,13 @@
 class Library{
 
-     BooksDTO[] books = new BooksDTO[1];
+     BooksDTO[] books;
 
      int index;
  
-	 public Library()
+	 public Library(int size)
     {
+		books = new BooksDTO[size];
+
 	  System.out.println("Library constructor is called");   
     }
    

@@ -1,15 +1,15 @@
 class Hospital{
     
 	// Has many patients
-       PatientDTO[] dtos = new PatientDTO[5];
+       PatientDTO[] dtos ;
    
     // instance variable
        int index;
 
     //constructor
-     public Hospital(){
-		 
-		 System.out.println("Hospital constructor is called");
+     public Hospital(int size){
+		 dtos = new PatientDTO[size];
+	 System.out.println("Hospital constructor is called");
 	 }
 	 
 	 public boolean createPatient(PatientDTO dto){
