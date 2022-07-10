@@ -34,7 +34,7 @@ class Hotel{
 		
 		for(int i=0; i<foodItems.length;i++){
 			
-			System.out.println("The foodItems id is "+foodItems[i].getId()+" \n The foodItems name is  "+foodItems[i].getName()+" \n The type of foodItems "+foodItems[i].getType()+" \n The hotel contact number  "+foodItems[i].getContactNo()+"\n The location of the hotel "+foodItems[i].getLocation());
+			System.out.println("The foodItems id is "+foodItems[i].getId()+" \n The foodItems name is  "+foodItems[i].getName()+" \n The type of foodItems "+foodItems[i].getType()+" \n The food price is  "+foodItems[i].getPrice());
 		}
 		
 		

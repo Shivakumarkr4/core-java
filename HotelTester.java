@@ -23,17 +23,14 @@ class HotelTester{
 	System.out.println("Enter the foodItem type");
 	String type = sc.next();
 	
-	System.out.println("Enter the foodItem contactNO");
-	long contactNO = sc.nextLong();
+	System.out.println("Enter the foodItem price ");
+	int price = sc.nextInt();
 	
-	System.out.println("Enter the foodItem location");
-	String location = sc.next();
    
    FI.setId(id);
    FI.setName(name);
    FI.setType(type);
-   FI.setContactNo(contactNO);
-   FI.setLocation(location);
+   FI.setPrice(price);
    HL.createFoodItems(FI);
    }
    HL.getFoodItemsDetails();

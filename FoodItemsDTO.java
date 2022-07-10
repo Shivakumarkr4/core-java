@@ -4,8 +4,7 @@ class FoodItemsDTO{
   private int id;
   private String name;
   private String type;
-  private long contactNo;
-  private String location;
+  private int price;
   
       public int getId()
    {
@@ -37,25 +36,17 @@ class FoodItemsDTO{
     this.type = type;
    }
    
-   public long getContactNo()
+   public int getPrice()
    {
-     return contactNo;
+     return price;
    }
    
-   public void setContactNo(long contactNo)
+   public void setPrice(int price)
    {
-    this.contactNo= contactNo;
+    this.price= price;
    }
    
-   public String getLocation()
-   {
-     return location;
-   }
-   
-   public void setLocation(String location)
-   {
-    this.location = location;
-   }
+
    
 
 
