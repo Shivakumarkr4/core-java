@@ -37,5 +37,35 @@ class Customer{
 		   }
 		 
 		}
+		
+		public boolean updateOrderAddressById(int id, String address){
+			
+			System.out.println("inside updateOrderAddressById()");
+		
+			boolean updateAddress = false;
+			for(int i=0; i<order.length;i++){
+				if(order[i].getId() == id){
+				order[i].setAddress(address);
+					updateAddress = true;
+					
+			    }
+				
+				else{
+					System.out.println("please update the order address first");
+				 }
+				 
+			}
+			
+		     return updateAddress;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }
 

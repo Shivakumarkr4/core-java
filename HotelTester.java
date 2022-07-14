@@ -34,6 +34,17 @@ class HotelTester{
    HL.createFoodItems(FI);
    }
    HL.getFoodItemsDetails();
+    System.out.println("Enter the price to be updated");
+	 int updatedPrice = sc.nextInt();
+
+
+	 System.out.println("Enter the existing name for price has to to be updated ");
+	 String existingName = sc.next();
+	
+	 HL.updateHotelPriceByName(updatedPrice,existingName);
+	 HL.getFoodItemsDetails();
+	 
+
 
 
    }

@@ -39,8 +39,23 @@ class HospitalTester{
      dto.setContactNo(contactNO);
 	 
 	 hos.createPatient(dto);
+
 	}
 	 hos.getPatientDetails();
+	 //invoking updatePatientAddressById method.
+	 
+	 
+	  
+	 System.out.println("Enter the address to be updated");
+	 String updatedAddress = sc.next();
+
+
+	 System.out.println("Enter the existing Id for address has to to be updated ");
+	 int existingId = sc.nextInt();
+	
+	 hos.updatePatientAddressById(existingId,updatedAddress);
+	 hos.getPatientDetails();
+	 
 	
      /*PatientDTO dto1 = new PatientDTO();
      dto1.setId(2);

@@ -36,7 +36,17 @@ class CustomerTester{
    od.setLocation(location);
    cs.createOrder(od);
    }
-   cs. getOrderDetails();
+	 cs.getOrderDetails();
+     System.out.println("Enter the address to be updated");
+	 String updatedAddress = sc.next();
+
+
+	 System.out.println("Enter the existing Id for address has to to be updated ");
+	 int existingId = sc.nextInt();
+	
+	 cs.updateOrderAddressById(existingId,updatedAddress);
+
+	 cs.getOrderDetails();
 
 
    }

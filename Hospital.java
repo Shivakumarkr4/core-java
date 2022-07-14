@@ -11,7 +11,7 @@ class Hospital{
 		 dtos = new PatientDTO[size];
 	 System.out.println("Hospital constructor is called");
 	 }
-	 
+	 //create
 	 public boolean createPatient(PatientDTO dto){
 		 System.out.println("inside createPatient");
 		 boolean isAdded = false;
@@ -31,7 +31,7 @@ class Hospital{
 		 
 		 
 		}
-   
+     //Read
      public void getPatientDetails(){
 		System.out.println("inside the getPatientDetails()"); 
 		 for(int i=0; i<dtos.length;i++){
@@ -39,10 +39,35 @@ class Hospital{
 			System.out.println(" The id is "+dtos[i].getId()+" \n The patient name is "+dtos[i].getName()+" \n The patient address is "+dtos[i].getAddress()+" \n The gender is "+dtos[i].getGender()+" \n The patient contact number is "+dtos[i].getContactNO()); 
 			
 		 }
-		 
-		 
+	 
 	 } 
-   
+	 
+	    //update
+		
+		public boolean updatePatientAddressById(int id, String address){
+			
+			System.out.println("inside updatePatientAddressById()");
+		
+			boolean updateAddress = false;
+			for(int i=0; i<dtos.length;i++){
+				if(dtos[i].getId() == id){
+				dtos[i].setAddress(address);
+					updateAddress = true;
+					
+			    }
+				
+				else{
+					System.out.println("please update the patient address first");
+				 }
+				 
+			}
+			
+		     return updateAddress;
+		}
+
+
+
+
 }
 
 

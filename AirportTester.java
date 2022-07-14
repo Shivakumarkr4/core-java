@@ -37,6 +37,16 @@ import java.util.Scanner;
    AP.createTerminal(TD);
    }
    AP.getTerminalDetails();
+   System.out.println("Enter the noOfDepartureGates to be updated");
+	 int updatedNoOfDepartureGates = sc.nextInt();
+
+
+	 System.out.println("Enter the existing Id for noOfDepartureGates has to to be updated ");
+	 int existingId = sc.nextInt();
+	
+	 AP.updateTerminalNoOfDepartureGatesById(existingId,updatedNoOfDepartureGates);
+	  AP.getTerminalDetails();
+	 
 
 
    }

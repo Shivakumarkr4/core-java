@@ -33,6 +33,16 @@ class LibraryTester{
    lb.createTypesOfBooks(book);
    }
    lb.getBookDetails();
+   System.out.println("Enter the author to be updated");
+	 String updatedAuthor = sc.next();
+
+
+	 System.out.println("Enter the existing Id for address has to to be updated ");
+	 int existingId = sc.nextInt();
+	
+	 lb.updateBookAuthorById(existingId,updatedAuthor);
+	 lb.getBookDetails();
+	 
 
 
    }

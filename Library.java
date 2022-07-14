@@ -37,8 +37,27 @@ class Library{
 		System.out.println("The book id is " +books[i].getId()+" \n The book name is "+books[i].getName()+" \n The type of book "+books[i].getType()+"\n The author of the book "+books[i].getAuthor());	
 		}		
 		  
+	 }
+
+
+    public boolean updateBookAuthorById(int id , String author){
+		System.out.println("inside the updateBookAuthorById");
+		
+		boolean updateAuthor = false;
+		
+		for(int i=0; i<books.length;i++){
+		if(books[i].getId() == id){	
+		 books[i].setAuthor(author);
+		 updateAuthor= true;
+		 
+		}
+		  else{
+			  System.out.println("please enter the correct id");
+		  }
 		  
-		  
-	  }
+		  }
+	         return updateAuthor;
+		}	
+	
 
 }

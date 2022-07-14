@@ -37,9 +37,26 @@ class Hotel{
 			System.out.println("The foodItems id is "+foodItems[i].getId()+" \n The foodItems name is  "+foodItems[i].getName()+" \n The type of foodItems "+foodItems[i].getType()+" \n The food price is  "+foodItems[i].getPrice());
 		}
 		
-		
-		
 	}
 
+		 public boolean updateHotelPriceByName(int price , String name){
+		System.out.println("inside the updateHotelPriceByName");
+		
+		boolean updatePrice = false;
+		
+		for(int i=0; i<foodItems.length;i++){
+		if(foodItems[i].getPrice() == price){	
+		 foodItems[i].setPrice(price);
+		 updatePrice= true;
+		 
+		}
+		  else{
+			  System.out.println("please enter the correct price");
+		  }
+		  
+		  }
+	         return updatePrice;
+		}	
+	
 
 }

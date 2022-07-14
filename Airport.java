@@ -39,6 +39,27 @@ class Airport{
 		  
 		  
 	 }
+		
+		public boolean updateTerminalNoOfDepartureGatesById(int id, int noOfDepartureGates){
+			
+			System.out.println("inside updateTerminalNoOfDepartureGatesById()");
+		
+			boolean updateNoOfDepartureGates = false;
+			for(int i=0; i<terminal.length;i++){
+				if(terminal[i].getId() == id){
+				terminal[i].setNoOfDepartureGates(id);
+					updateNoOfDepartureGates = true;
+					
+			    }
+				
+				else{
+					System.out.println("please update the NoOfDepartureGates first");
+				 }
+				 
+			}
+			
+		     return updateNoOfDepartureGates;
+		}
 
 
 
