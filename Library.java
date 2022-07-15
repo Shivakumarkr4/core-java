@@ -1,4 +1,7 @@
-class Library{
+import java.util.Arrays;
+
+
+   class Library{
 
      BooksDTO[] books;
 
@@ -58,6 +61,27 @@ class Library{
 		  }
 	         return updateAuthor;
 		}	
-	
+		
+			
+				public boolean deleteBooksDetailsByName(String name){
+					boolean booksDeleted = false;
+					System.out.println("inside deleteBooksDetailsByNamess");
+					int i,j;
+					for (i=0 ,j=0 ; j<books.length;j++){
+						
+					    if(!books[j].getName().equals(name)){
+							books[i++]=books[j];
+							booksDeleted=true;
+							
+					    }
+						else{
+							System.out.println("the books is not find");
+						}
+					}
+					
+					books= Arrays.copyOf(books,i);
+					return booksDeleted;
+				}
+
 
 }

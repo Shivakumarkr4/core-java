@@ -1,3 +1,7 @@
+import java.util.Arrays;
+
+
+
 class Hospital{
     
 	// Has many patients
@@ -62,10 +66,52 @@ class Hospital{
 				 
 			}
 			
+			
 		     return updateAddress;
 		}
 
-
+			public boolean updatePatientContactNoByName(String name,long contactNo){
+			
+			System.out.println("inside updatePatientContactNoByName()");
+		
+			boolean updateContactNo = false;
+			for(int i=0; i<dtos.length;i++){
+				if(dtos[i].getName().equals(name)){
+				dtos[i].setContactNo(contactNo);
+					updateContactNo= true;
+					System.out.println("patient's contact No is update");
+					
+			    }
+				
+				else{
+					System.out.println("patient Id is not found");
+				 }
+				 
+			}
+			
+			
+		     return updateContactNo;
+		}
+				
+				public boolean deletePatientDetailsByName(String name){
+					boolean patientDeleted = false;
+					System.out.println("inside deletepatientByName");
+					int i,j;
+					for (i=0 ,j=0 ; j<dtos.length;j++){
+						//"Hitesh".equals("hitesh")
+					    if(!dtos[j].getName().equals(name)){
+							dtos[i++]=dtos[j];
+							patientDeleted=true;
+							
+					    }
+						else{
+							System.out.println("the patientis not available");
+						}
+					}
+					
+					dtos= Arrays.copyOf(dtos,i);
+					return patientDeleted;
+				}
 
 
 }

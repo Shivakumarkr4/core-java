@@ -34,7 +34,7 @@ class HotelTester{
    HL.createFoodItems(FI);
    }
    HL.getFoodItemsDetails();
-    System.out.println("Enter the price to be updated");
+    /*-System.out.println("Enter the price to be updated");
 	 int updatedPrice = sc.nextInt();
 
 
@@ -42,7 +42,14 @@ class HotelTester{
 	 String existingName = sc.next();
 	
 	 HL.updateHotelPriceByName(updatedPrice,existingName);
-	 HL.getFoodItemsDetails();
+	 HL.getFoodItemsDetails();*/
+	 
+	  HL.getFoodItemsDetails();
+	System.out.println("Enter the name to be deleted");
+	String name1 = sc.next();
+	HL.deleteFoodItemsDetailsByName(name1);
+	HL.getFoodItemsDetails();
+   }
 	 
 
 
@@ -63,4 +70,3 @@ class HotelTester{
 
 
 
-}

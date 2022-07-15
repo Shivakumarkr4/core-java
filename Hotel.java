@@ -1,3 +1,6 @@
+import java.util.Arrays;
+
+
 class Hotel{
 	
 	
@@ -57,6 +60,25 @@ class Hotel{
 		  }
 	         return updatePrice;
 		}	
-	
+	public boolean deleteFoodItemsDetailsByName(String name){
+					boolean foodItemsDeleted = false;
+					System.out.println("inside deleteBooksDetailsByNames");
+					int i,j;
+					for (i=0 ,j=0 ; j<foodItems.length;j++){
+						
+					    if(!foodItems[j].getName().equals(name)){
+							foodItems[i++]=foodItems[j];
+							foodItemsDeleted=true;
+							
+					    }
+						else{
+							System.out.println("the foodItems is not available");
+						}
+					}
+					
+					foodItems= Arrays.copyOf(foodItems,i);
+					return foodItemsDeleted;
+				}
+
 
 }

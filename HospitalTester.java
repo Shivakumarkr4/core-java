@@ -42,11 +42,12 @@ class HospitalTester{
 
 	}
 	 hos.getPatientDetails();
+	 
 	 //invoking updatePatientAddressById method.
 	 
 	 
 	  
-	 System.out.println("Enter the address to be updated");
+	/* System.out.println("Enter the address to be updated");
 	 String updatedAddress = sc.next();
 
 
@@ -54,7 +55,7 @@ class HospitalTester{
 	 int existingId = sc.nextInt();
 	
 	 hos.updatePatientAddressById(existingId,updatedAddress);
-	 hos.getPatientDetails();
+	 hos.getPatientDetails();*/
 	 
 	
      /*PatientDTO dto1 = new PatientDTO();
@@ -98,6 +99,13 @@ class HospitalTester{
 	 hos.createPatient(dto3);
 	 hos.createPatient(dto4);*/
     
+	hos.getPatientDetails();
+	System.out.println("Enter the name to be deleted");
+	String name1 = sc.next();
+	hos.deletePatientDetailsByName(name1);
+	hos.getPatientDetails();
+	
+	
     
 	}
 

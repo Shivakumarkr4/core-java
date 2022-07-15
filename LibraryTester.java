@@ -33,18 +33,21 @@ class LibraryTester{
    lb.createTypesOfBooks(book);
    }
    lb.getBookDetails();
-   System.out.println("Enter the author to be updated");
+  /* System.out.println("Enter the author to be updated");
 	 String updatedAuthor = sc.next();
 
 
 	 System.out.println("Enter the existing Id for address has to to be updated ");
 	 int existingId = sc.nextInt();
-	
 	 lb.updateBookAuthorById(existingId,updatedAuthor);
-	 lb.getBookDetails();
+	 lb.getBookDetails();*/
 	 
 
-
+    lb.getBookDetails();
+	System.out.println("Enter the name to be deleted");
+	String name1 = sc.next();
+	lb.deleteBooksDetailsByName(name1);
+	lb.getBookDetails();
    }
 
    
