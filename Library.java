@@ -80,8 +80,40 @@ import java.util.Arrays;
 					}
 					
 					books= Arrays.copyOf(books,i);
+
 					return booksDeleted;
 				}
+				
+				 public String getBookNameById(int id){
+		 System.out.println("Inside getBookNameById() ");
+		 String bookName = null;
+		 for(int i=0; i<books.length;i++){
+			 if(books[i].getId()==id){
+				 bookName = books[i].getName();
+			 }
+			 else{
+				 System.out.println("The id is not matched");
+			 }
+		 }
+		 return bookName;
+	 }
+	 
+	 public String[] getAllBooksName(){
+		 System.out.println("Inside getAllBooksName() ");
+		 int i,j;
+		 for( j=0,i=0;i<books.length;i++){ 
+			  System.out.println(books[i].getName());
+			  j++;
+		 }
+		    
+		  String[] allbooksName = new String[j];
+		   for(int k=0,m=0;k<books.length;k++){
+			 allbooksName[m++] = books[k].getName(); 
+		  }
+           System.out.println("End getAllBooksName() ");
+		 return allbooksName;
+	 }
+	 
 
 
 }

@@ -1,3 +1,4 @@
+
 class PatientDTO{ 
 
    private int id;
@@ -5,6 +6,13 @@ class PatientDTO{
    private String address;
    private Gender gender;
    private long contactNo;
+   
+   
+     /*@Override
+	 public int hashCode(){
+	 return this.id;
+	 }*/
+   
    
    
      public int getId()
@@ -58,7 +66,11 @@ class PatientDTO{
 		 this.contactNo = contactNo;
 	 }
 
-
+	@Override
+	public String toString(){
+		return"[PatientDTO : Id="+this.getId()+",Name="+this.getName()+", Address= "+this.getAddress()+",contactNo="+this.getContactNO()+",gender="+this.getGender()+"]";
+		
+	} 
 
 
 

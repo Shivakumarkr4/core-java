@@ -27,6 +27,7 @@ class HospitalTester{
 	 System.out.println("Enter patient id");
      int id = sc.nextInt();
 	 
+	 
 	 System.out.println("Enter the contact number");
      long contactNO = sc.nextLong();
     	 
@@ -41,21 +42,67 @@ class HospitalTester{
 	 hos.createPatient(dto);
 
 	}
-	 hos.getPatientDetails();
-	 
-	 //invoking updatePatientAddressById method.
-	 
-	 
-	  
-	/* System.out.println("Enter the address to be updated");
-	 String updatedAddress = sc.next();
-
-
-	 System.out.println("Enter the existing Id for address has to to be updated ");
-	 int existingId = sc.nextInt();
 	
-	 hos.updatePatientAddressById(existingId,updatedAddress);
-	 hos.getPatientDetails();*/
+	 String options = null;
+	
+	do{
+		System.out.println("Enter 1 to fetch all the Patients'");
+		System.out.println("Enter 2 to update Patient's contactNo");
+		System.out.println("Enter 3 to update Patient's Address by id");
+		System.out.println("Enter 4 to delete Patient Details by ");
+		System.out.println("Enter 5 to patient name by id ");
+		System.out.println("Enter 6 to patient contactNO by name ");
+		System.out.println("Enter the choice");
+		int choise = sc.nextInt();
+		
+		switch(choise){
+			case 1:  hos.getPatientDetails();
+					break;
+			case 2: System.out.println("Enter the existing Id for address has to to be updated ");
+					int existingId = sc.nextInt();
+					System.out.println("Enter the address has to be updated");
+	                String updatedAddress = sc.next();
+				    hos.updatePatientAddressById(existingId,updatedAddress);
+					break;
+			case 3:	System.out.println("Enter the existing name ");
+					String existingName = sc.next();
+					System.out.println("Enter the new contact number");
+					long updatedContactNo = sc.nextLong();
+					hos.updatePatientContactNoByName(existingName,updatedContactNo);
+					break;
+			case 4:	System.out.println("Enter the name to be deleted");
+					String name1 = sc.next();
+					hos.deletePatientDetailsByName(name1);
+					break;
+					
+			case 5: System.out.println("Enter the get id");
+					int id = sc.nextInt();
+					System.out.println(hos.getPatientNameById(id));
+			        break;
+			case 6: System.out.println("Enter the get contactNO");
+					 String name = sc.next();
+					System.out.println(hos.getPatientContactNoByName(name));
+					
+		  default : System.out.println("Given choise cannot be delivered");
+					break;
+			
+			
+	   }
+		 System.out.println("Do you want continue Y/N");
+		 options = sc.next();
+		 
+		 
+		 
+	}while(options.equals("Y"));
+	
+
+	 
+	 
+
+
+
+	
+	 //hos.getPatientDetails();*/
 	 
 	
      /*PatientDTO dto1 = new PatientDTO();
@@ -89,21 +136,17 @@ class HospitalTester{
      dto4.setAddress("mysore");
      dto4.setGender(Gender.MALE);
      dto4.setContactNo(8494992342l);*/
-	 
-	 
-	 
-
-	 
+	 	 
      /*hos.createPatient(dto1);
 	 hos.createPatient(dto2);
 	 hos.createPatient(dto3);
 	 hos.createPatient(dto4);*/
     
-	hos.getPatientDetails();
+	/*hos.getPatientDetails();
 	System.out.println("Enter the name to be deleted");
 	String name1 = sc.next();
 	hos.deletePatientDetailsByName(name1);
-	hos.getPatientDetails();
+	hos.getPatientDetails();*/
 	
 	
     

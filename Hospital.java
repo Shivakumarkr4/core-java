@@ -1,4 +1,4 @@
-import java.util.Arrays;
+ import java.util.Arrays;
 
 
 
@@ -39,8 +39,10 @@ class Hospital{
      public void getPatientDetails(){
 		System.out.println("inside the getPatientDetails()"); 
 		 for(int i=0; i<dtos.length;i++){
+			System.out.println(dtos[i]);
+			
 			 
-			System.out.println(" The id is "+dtos[i].getId()+" \n The patient name is "+dtos[i].getName()+" \n The patient address is "+dtos[i].getAddress()+" \n The gender is "+dtos[i].getGender()+" \n The patient contact number is "+dtos[i].getContactNO()); 
+			//System.out.println(" The id is "+dtos[i].getId()+" \n The patient name is "+dtos[i].getName()+" \n The patient address is "+dtos[i].getAddress()+" \n The gender is "+dtos[i].getGender()+" \n The patient contact number is "+dtos[i].getContactNO()); 
 			
 		 }
 	 
@@ -91,29 +93,59 @@ class Hospital{
 			
 			
 		     return updateContactNo;
+			 
 		}
 				
 				public boolean deletePatientDetailsByName(String name){
 					boolean patientDeleted = false;
 					System.out.println("inside deletepatientByName");
-					int i,j;
-					for (i=0 ,j=0 ; j<dtos.length;j++){
+					//multipile insilization
+					int newIndex,oldIndex;
+					for (newIndex=0 ,oldIndex=0 ; oldIndex<dtos.length;oldIndex++){
 						//"Hitesh".equals("hitesh")
-					    if(!dtos[j].getName().equals(name)){
-							dtos[i++]=dtos[j];
+					    if(!dtos[oldIndex].getName().equals(name)){
+							//dtos[0] = dtos[0];
+							dtos[newIndex++]=dtos[oldIndex];
 							patientDeleted=true;
 							
 					    }
 						else{
-							System.out.println("the patientis not available");
+							System.out.println("the patientis not found");
 						}
 					}
 					
-					dtos= Arrays.copyOf(dtos,i);
+					dtos= Arrays.copyOf(dtos,newIndex);
 					return patientDeleted;
 				}
-
-
+				
+		     public String getPatientNameById(int id){
+				 String patientName = null;
+				 for(int i=0; i<dtos.length;i++){
+				  if(dtos[i].getId()==id){
+				  patientName=dtos[i].getName();
+					  
+				  }
+					else{
+						System.out.println("The patient id is not found");
+					} 
+				 }
+				 return patientName;  
+			 }
+				public long getPatientContactNoByName(String name){
+				 long patientContactNo = 0;
+				 for(int i=0; i<dtos.length;i++){
+				  if(dtos[i].getName().equals(name)){
+				  patientContactNo=dtos[i].getContactNO();
+					  
+				  }
+					else{
+						System.out.println("The patient name is not found");
+					} 
+				 }
+				 return patientContactNo;  
+			 }
+				
+        
 }
 
 
